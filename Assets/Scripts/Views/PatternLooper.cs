@@ -5,8 +5,8 @@ namespace Views
     [RequireComponent(typeof(SpriteRenderer))]
     public class PatternLooper : MonoBehaviour
     {
-        private float speed = 1f;
-        private float width = 6f;
+        [Range(-1f, 1f)] [SerializeField] private float speed = .35f;
+        private float width;
         private SpriteRenderer spriteRenderer;
         private Vector2 startSize;
 
@@ -15,13 +15,15 @@ namespace Views
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             startSize = spriteRenderer.size;
+            width = startSize.x * 10;
         }
 
         // Update is called once per frame
         private void FixedUpdate()
         {
-            spriteRenderer.size = new Vector2(spriteRenderer.size.x + speed * Time.fixedDeltaTime, spriteRenderer.size.y);
-            if (spriteRenderer.size.x > width)
+            spriteRenderer.size =
+                new Vector2(spriteRenderer.size.x + speed * Time.fixedDeltaTime, spriteRenderer.size.y);
+            if (Mathf.Approximately(spriteRenderer.size.x, width))
             {
                 spriteRenderer.size = startSize;
             }

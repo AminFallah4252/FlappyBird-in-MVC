@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1120383044}
-  background: {fileID: 282145725}
+  background: {fileID: 0}
   pipesParent: {fileID: 1274573794}
   ground: {fileID: 895038261}
   gameModel: {fileID: 11400000, guid: f3de7ce42db7fbf4db23332b57b2cc3f, type: 2}
@@ -241,22 +241,21 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 5, y: 2.56}
+  m_Size: {x: 2, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &282145725
-Transform:
+--- !u!224 &282145725
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282145723}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -264,6 +263,11 @@ Transform:
   - {fileID: 895038261}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.82, y: 0}
+  m_SizeDelta: {x: 1.44, y: 2.56}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &282145726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,11 +275,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282145723}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ede6ff11f47425f488bb8797a2360cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.069
 --- !u!1 &373209039
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,14 +513,14 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0.5}
+    pivot: {x: 1, y: 0.5}
     oldSize: {x: 1.68, y: 0.56}
-    newSize: {x: 5, y: 0.56}
+    newSize: {x: 2, y: 0.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 1
-  m_Size: {x: 1.7, y: 0.57}
+  m_Size: {x: 4.72, y: 0.57}
   m_EdgeRadius: 0
 --- !u!212 &895038263
 SpriteRenderer:
@@ -566,7 +571,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 5, y: 0.56}
+  m_Size: {x: 2, y: 0.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -611,6 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede6ff11f47425f488bb8797a2360cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.45
 --- !u!1 &1015806075
 GameObject:
   m_ObjectHideFlags: 0
